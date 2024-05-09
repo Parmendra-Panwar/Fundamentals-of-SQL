@@ -1,0 +1,35 @@
+<%- include("include/top.ejs") %>
+
+  <body>
+    <br><br><br>
+    <center>
+      <table>
+        <tr>
+          <td>ID</td>
+          <td>Email</td>
+          <td></td>
+        </tr>
+
+        <%for(user of result){ %>
+          <tr>
+            <td>
+              <%= user.username %>
+            </td>
+            <td>
+              <%= user.email %>
+            </td>
+            <td>
+              <%= user.password %>
+            </td>
+            <td>
+              <form method="get" action="/user/<%=user.email%>/edit">
+                <button>EDIT USER Detail</button>
+              </form>
+            </td>
+          </tr>
+          <% } %>
+      </table>
+    </center>
+  </body>
+
+  </html>

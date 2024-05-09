@@ -1,0 +1,19 @@
+<%- include("include/top.ejs") %>
+
+  <body>
+    <br><br><br>
+    <center>
+      <h2>EDIT</h2>
+      <h3>you are about to edit : <%=user.email%>
+      </h3>
+      <form method="post" action="/user/<%=user.email%>?_method=PATCH">
+        <textarea name="username" id="" cols="30" rows="10">
+        <%= user.username %>
+      </textarea>
+        <input type="password" name="password" placeholder="Enter password">
+        <button>EDIT</button>
+      </form>
+    </center>
+  </body>
+
+  </html>
